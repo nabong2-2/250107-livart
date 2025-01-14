@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
+    <!-- 헤더+1행 -->
     <div id="container_a">
         <header>
             <div class="h_left">
@@ -22,7 +23,10 @@
                 </nav>
             </div>
             <div class="h_right">
-                <a href="#" class="search_box"><p>검색어 입력</p></a>
+                <form action="#" method="get" id="search_box">
+                    <input type="search" name="user_search" id="user_search" placeholder="검색어 입력">
+                    <button type="button" id="search_btn"><img src="./images/search.png" alt="검색"></button>
+                </form>
                 <div class="customer_service">
                     <div class="c_left">
                         <a href="#">로그인</a>
@@ -43,6 +47,7 @@
             <div class="scrollbar"></div>
         </div>
     </div>
+    <!-- 2행 -->
     <div class="container container_b">
         <div class="category">
             <a href="#"><span></span><em>기획전</em></a>
@@ -56,6 +61,7 @@
             <a href="#"><span></span><em>맞춤형쇼핑</em></a>
         </div>
     </div>
+    <!-- 3행 -->
     <div class="container container_c">
         <h2>가구 겨울 정기 프로모션</h2>
         <p>#리바트 정기 프로모션 #겨울 정기행사 #패키지 #소파 #식탁 #장롱 #침대 #키즈</p>
@@ -73,20 +79,53 @@
             <ul>
                 <li>
                     <span></span>
-                    <span class="bottom_title"></span>
+                    <span class="bottom_title">식탁 패키지</span>
                     <span class="bottom_info">구매 시 의자 30%</span>
                 </li>
                 <li>
                     <span></span>
-                    <span class="bottom_title"></span>
+                    <span class="bottom_title">자녀방 패키지</span>
                     <span class="bottom_info">구매 시 의자 30%</span>
                 </li>
                 <li>
                     <span></span>
-                    <span class="bottom_title"></span>
+                    <span class="bottom_title">서재 패키지</span>
                     <span class="bottom_info">구매 시 의자 30%</span>
                 </li>
             </ul>
+        </div>
+    </div>
+    <!-- 4행(쿠폰)/미완성 -->
+    <div class="container_d">
+        <div class="contents">
+            <a href="#"><img src="./images/arrow_l.png" alt="왼쪽 화살표"></a>
+            <div class="images_coupon">
+                <a href="#"><img src="#" alt=""></a>
+                <a href="#"><img src="#" alt=""></a>
+                <a href="#"><img src="#" alt=""></a>
+            </div>
+            <a href="#"><img src="./images/arrow_l.png" alt="오른쪽 화살표"></a>
+        </div>
+    </div>
+    <!-- 5행 -->
+    <div class="container container_e">
+        <h2>NEW</h2>
+        <p>더 특별한 당신을 위한 라바트가 제안하는 프리미엄 가구</p>
+        <div class="new_contents">
+            <div class="left_newbox">
+                <div class="l_bigbox"></div>
+                <p>변하지 않은 가치를 담은<br><span>아마트몰 프리미엄 가구</span></p>
+            </div>
+            <div class="right_newbox">
+                <div class="r_left_box">
+                    <div class="new_smallbox"></div>
+                    <div class="new_bigbox"></div>
+                </div>
+                <div class="r_right_box">
+                    <div class="new_bigbox"></div>
+                    <div class="new_smallbox"></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

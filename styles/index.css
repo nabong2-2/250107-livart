@@ -27,21 +27,24 @@
 #container_a header .h_left nav a {margin-right: 50px;}
 #container_a header .h_left nav a:last-child {margin-right: 0;}
 #container_a header .h_right {
-    display: flex; flex-flow: row nowrap; justify-content:space-between; align-items: center;
+    display: flex; flex-flow: row nowrap; justify-content:space-between;
 }
-#container_a header .h_right .search_box {
-    width: 350px; height: 100%; display: inline-block;
+#container_a header .h_right #search_box {
+    width: 350px; height: 100%;
     background-color: #fff;
-    border-radius: 50px; 
-    background-image: url(../images/search.png);
-    background-repeat: no-repeat;
-    background-position: 314px center;
+    border-radius: 50px;
     margin-right: 50px;
+    display: flex; flex-flow: row nowrap; justify-content:space-between;
+    padding: 0 20px;
 }
-#container_a header .h_right .search_box p {
-    color: #888; position: relative; top: 14px; left: 20px;
+#container_a header .h_right #search_box input[name^=user] {
+}
+#container_a header .h_right #search_box input[name^=user]::placeholder {
+    color: #888;
     font-size:0.94rem; font-weight:500; letter-spacing:-0.02rem;
-
+}
+#container_a header .h_right #search_box .search_btn {}
+#container_a header .h_right #search_box .search_btn img {
 }
 #container_a header .h_right .customer_service {
     display: flex; flex-flow: row nowrap; justify-content:space-between; align-items: center;
@@ -69,6 +72,11 @@
 }
 /*★★★★★★★★★ 공통 */
 .container {width: 1600px; margin: 0 auto;}
+.container h2 {}
+.container h2+p {
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
 /* 2행 */
 .container_b {
     padding: 75px 0;
@@ -123,7 +131,7 @@
     padding: 75px 0;
 }
 .container_c h2 {}
-.container_c p {
+.container_c h2+p {
     margin-top: 30px;
     padding-bottom: 50px;
 }
@@ -131,6 +139,7 @@
 }
 .container_c .winter_contents .w_top {
     position: relative;
+    margin-bottom: 122px;
 }
 .container_c .winter_contents .w_top .w_big_box {
     background-image: url(../images/sq001.jpg);
@@ -143,6 +152,7 @@
     padding: 40px 90px;
     position: absolute; bottom: -72px; right: 0;
     border-radius: 20px;
+    height: 302px; width: 545px;
 }
 .container_c .winter_contents .w_top .w_small_box::after {
     border-radius: 20px;
@@ -151,20 +161,130 @@
     position: absolute; top: 0; left: 0;
     z-index: 40;
 }
-.container_c .winter_contents .w_top .w_small_box * {
+.container_c .winter_contents .w_top .w_small_box > * {
     color: #fff;
     display: block;
     position: relative;
     z-index: 50;
 }
 .container_c .winter_contents .w_top .w_small_box .bed_title {
+    font-size: 1.25rem; letter-spacing: -0.02rem; font-weight: 500;
 }
-.container_c .winter_contents .w_top .w_small_box > em {}
-.container_c .winter_contents .w_top .w_small_box .bed_info {}
-.container_c .winter_contents .w_top .w_small_box .bed_info > em {}
-.container_c ul {}
-.container_c ul li {}
-.container_c ul li span {}
-.container_c ul li span:first-child {}
-.container_c ul li .bottom_title {}
+.container_c .winter_contents .w_top .w_small_box > em {
+    font-size: 1.56rem; letter-spacing: -0.02rem; font-weight: 700;
+    margin: 12px 0 15px 0;
+}
+.container_c .winter_contents .w_top .w_small_box .bed_info {
+    font-size: 1.38rem; letter-spacing: -0.02rem; font-weight: 600;
+    
+}
+.container_c .winter_contents .w_top .w_small_box .bed_info:nth-child(4) {
+    margin: 15px 0;
+}
+.container_c .winter_contents .w_top .w_small_box .bed_info > em {
+    font-size: 1.38rem; letter-spacing: -0.02rem; font-weight: 400;
+
+}
+.container_c ul {
+    display: flex; flex-flow: row nowrap;
+}
+.container_c ul li {
+    width: calc((100% - 40px) / 3);
+    text-align: center;
+}
+.container_c ul li:nth-child(2) {margin: 0 20px;}
+.container_c ul li span {display: block;}
+.container_c ul li span:first-child {
+    height: 377px;
+    border-radius: 30px;
+    background-color: yellow;
+}
+.container_c ul li span:first-child {
+    background-image: url(../images/round003.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container_c ul li:nth-child(2) span:first-child {
+    background-image: url(../images/round004.jpg);
+}
+.container_c ul li:last-child span:first-child {
+    background-image: url(../images/round005.jpg);
+}
+.container_c ul li .bottom_title {
+    margin: 12px 0;
+}
 .container_c ul li .bottom_info {}
+/* 4행 */
+.container_d {
+    padding: 75px 0;
+    background-color: paleturquoise;
+}
+.container_d .contents {}
+.container_d .contents > a {}
+.container_d .contents > a img {}
+.container_d .contents .images_coupon {}
+.container_d .contents .images_coupon a {}
+.container_d .contents .images_coupon a img {}
+/* 5행 */
+.container_e {
+    padding: 75px 0;
+    background-color: yellow;
+}
+.container_e h2 {}
+.container_e h2+p {}
+.container_e .new_contents {
+    display: flex; flex-flow: row nowrap; justify-content: space-between;
+}
+.container_e .new_contents .left_newbox {
+    width: calc((100% - 20px) / 2); height: 945px;
+    position: relative;
+    margin-right: 20px;
+}
+.container_e .new_contents .left_newbox .l_bigbox {
+    width: 100%; height: 100%;
+    background-image: url(../images/b_sq001.jpg);
+    background-repeat: no-repeat;
+}
+.container_e .new_contents .left_newbox p {
+    padding: 5px 40px; 
+    background-color: rgba(0,0,0,0.2);
+    display: inline-block;
+    position: absolute; bottom: 43px; left: 0;
+    color: #fff;
+}
+.container_e .new_contents .left_newbox p span {}
+.container_e .new_contents .right_newbox {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    width: calc((100% - 20px) / 2);
+}
+.container_e .new_contents .right_newbox .r_left_box {
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+}
+/* s공통 */
+.container_e .new_contents .right_newbox > * {
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.container_e .new_contents .right_newbox .new_smallbox {
+    height: 385px;
+    background-image: url(../images/b_sq002.jpg);
+    background-repeat: no-repeat;
+}
+.container_e .new_contents .right_newbox .new_bigbox {
+    height: 540px;
+    background-image: url(../images/b_sq003.jpg);
+    background-repeat: no-repeat;
+}
+/* e공통 */
+.container_e .new_contents .right_newbox .r_left_box .new_smallbox {
+    margin-bottom: 20px;
+}
+.container_e .new_contents .right_newbox .r_left_box .new_bigbox {}
+.container_e .new_contents .right_newbox .r_right_box {
+    width: calc((100% - 20px) / 2);
+}
+.container_e .new_contents .right_newbox .r_right_box .new_bigbox {
+    margin-bottom: 20px;
+}
